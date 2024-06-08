@@ -5,3 +5,4 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [UserController::class, 'index'])->name('user.index');
 Route::get('/create', [UserController::class, 'create'])->name('user.create');
+Route::post('/register', [UserController::class, 'register'])->name('user.register');

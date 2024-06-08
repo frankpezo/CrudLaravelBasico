@@ -13,12 +13,16 @@
 <body>
     {{-- Colocamos el menú --}}
     @include('layouts.partials.menu')
+    {{-- Para el mensaje --}}
+    @include('layouts.partials.messages')
 
     {{-- Contenido de la página --}}
     @yield('content')
 
 
+
     <!-- Scripts Bootstrap-->
+ 
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
