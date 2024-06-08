@@ -34,4 +34,8 @@ class UserController extends Controller
         return redirect()->route('user.create')->with('success', 'Se registró con éxito');
     }
 
+    public function edit(User $user): View{
+        return view('userview.edit', compact('user'));
+    }
+
 }

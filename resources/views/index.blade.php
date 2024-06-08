@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Registros</h1>
+                <h1 class="mt-5">Registros</h1>
                 <!-- Tabla-->
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped text-center mt-4">
@@ -30,7 +30,7 @@
                                 <td>{{ $user->dni }}</td>
                                 <td>{{ $user->estadocivil }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-outline-warning"><svg
+                                    <a href="{{ route('user.edit', $user->id) }}" class="btn btn-outline-warning"><svg
                                             class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" viewBox="0 0 24 24">
