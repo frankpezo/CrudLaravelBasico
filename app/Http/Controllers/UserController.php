@@ -12,7 +12,8 @@ class UserController extends Controller
 {
     public function index(): View
     {
-        return view('index');
+        $users = User::all();
+        return view('index', compact('users'));
     }
 
     public function create(): View
@@ -29,7 +30,7 @@ class UserController extends Controller
         $users->dni = $request->dni;;
         $users->estadocivil = $request->estadocivil;
         $users->save();
-        
+
         return redirect()->route('user.create')->with('success', 'Se registró con éxito');
     }
 
