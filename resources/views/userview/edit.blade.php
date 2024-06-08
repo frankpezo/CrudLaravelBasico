@@ -9,7 +9,8 @@
                 <div class="card border-secondary">
                     <div class="card-header bg-dark text-white">Modificar información</div>
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="{{ route('user.update', $user->id) }}" method="POST">
+                            @method('PUT')
                             @csrf
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>

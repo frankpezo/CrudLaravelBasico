@@ -7,7 +7,7 @@
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col col-md-8 ">
                 <div class="card border-secondary">
-                    <div class="card-header bg-primary text-white">Nuevo registro</div>
+                    <div class="card-header bg-dark text-white">Nuevo registro</div>
                     <div class="card-body">
                         <form action="{{ route('user.register') }}" method="POST">
                             @csrf

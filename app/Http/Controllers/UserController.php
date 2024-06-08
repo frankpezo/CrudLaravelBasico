@@ -38,4 +38,16 @@ class UserController extends Controller
         return view('userview.edit', compact('user'));
     }
 
+    public function update(UserRequest $request, User $user): RedirectResponse
+    { 
+        $user->update($request->all());
+        return redirect()->route('user.index')->with('success', 'Se actualizó con éxito');
+
+    }
+
+    public function delete(Request $request, User $user): RedirectResponse
+    {
+        $user->delete();
+        return redirect()->route('user.index')->with('danger', 'Se eliminó con éxito');
+    }
 }

@@ -1,7 +1,29 @@
 @if ($message = Session::get('success'))
-    <div class="alert alert-success alert-block">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "{{ $message }}",
+                showConfirmButton: false,
+                timer: 1700
+            });
+        });
+    </script>
+@endif
 
-        <strong>{{ $message }}</strong>
-        <button type="button" class="close" data-dismiss="alert">cerrar</button>
-    </div>
+
+
+@if ($message = Session::get('danger'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "{{ $message }}",
+                showConfirmButton: false,
+                timer: 1700
+            });
+        });
+    </script>
 @endif
