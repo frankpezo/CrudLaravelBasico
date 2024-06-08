@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    {{-- Colocamos el menú --}}
+    @include('layouts.partials.menu')
+
+    {{-- Contenido de la página --}}
     @yield('content')
 
 

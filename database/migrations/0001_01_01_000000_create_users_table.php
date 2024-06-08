@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
-            $table->unsignedInteger('edad');
-            $table->unsignedInteger('dni');
+            $table->string('edad');
+            $table->string('dni');
             $table->string('estadocivil');
             $table->timestamps();
         });

@@ -12,4 +12,9 @@ class UserController extends Controller
         return view('index');
     }
 
+    public function create(): View
+    {
+      return view('userview.create');     
+    }
+
 }
