@@ -18,4 +18,9 @@ class User extends Authenticatable
         'dni',
         'estadocivil'
     ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
 }
