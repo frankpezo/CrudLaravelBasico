@@ -43,5 +43,43 @@ class UserApiController extends Controller
             ], 404);
         }
     }
+
+
+    public function update(UserRequest $request, $id): JsonResponse
+    {
+        $users = User::find($id);
+
+        if($users){
+            $users->update($request->all());
+            return response()->json([
+                'success'=> true, 
+                'data'=> $users
+            ], 200);
+        }else{
+            return response()->json([
+                'success'=>false, 
+                'message'=> 'Usuario no encontrado'
+            ], 404);
+        }
+    }
+
+    public function delete($id): JsonResponse
+    {
+        $users = User::find($id);
+
+        if($users){
+            $users->delete();
+            return response()->json([
+                'success'=> true, 
+                'message'=> 'Usuario eliminado'
+            ], 200);
+        }else{
+            return response()->json([
+                'success'=>false, 
+                'message'=> 'Usuario no encontrado'
+            ], 404);
+        }
+    }
+
     
 }
